@@ -964,8 +964,11 @@ class Client(object):
         #    sock.settimeout(self._keepalive)
         #    sock = WebsocketWrapper(sock, self._host, self._port, self._ssl,
         #        self._websocket_path, self._websocket_extra_headers)
+        if self._ssl:
+            self._sock = ssl_sock
+        else:
+            self._sock = sock
 
-        self._sock = ssl_sock
         #self._sock.setblocking(0)
 
         return self._send_connect(self._keepalive, self._clean_session)
