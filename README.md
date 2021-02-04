@@ -41,6 +41,18 @@ curl https://raw.githubusercontent.com/eclipse/paho.mqtt.python/master/setup.py 
 To test the library without ssl, there is an example under `/generic/no-ssl`
 which uses a local deployment or a public broker at eclipse.
 
+#### Testing with Thingsboard
+You could use the following commands to launch a docker container with basic
+Thingsboard features:
+
+```bash
+mkdir -p ~/.mytb-data && sudo chown -R 799:799 ~/.mytb-data
+mkdir -p ~/.mytb-logs && sudo chown -R 799:799 ~/.mytb-logs
+docker run -d -p 9090:9090 -p 1883:1883 -p 5683:5683/udp -v ~/.mytb-data:/data \
+-v ~/.mytb-logs:/var/log/thingsboard --name mytb --restart always thingsboard/tb-postgres
+```
+Then you could use the test files located in the `thingsboard` folder.
+
 --------
 ### Paho
 __The Paho library in this directory has been modified__. The standard Paho library does not run on the Python implementation that ships with these devices. The standard Paho library as well as its documentation can be found [here](https://github.com/eclipse/paho.mqtt.python).
