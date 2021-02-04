@@ -4,5 +4,9 @@
 *.key
 *.pem
 
+aws/certs
+aws/kit
+build/*
+
 !aws/aws_ver.crt
 !azure/azur_ver.crt
