@@ -25,6 +25,21 @@ After editing the files to work with your MQTT broker put, your target Python fi
 
 The target file can also be run locally with Python2.
 
+-------------------
+### Running in local deployment
+It is useful being able to test the library via a local deployment so you may
+have the necessity to install this library in the local setup. For this, a
+slightly different 
+`setup.py` file from original repository is being employed.
+
+To get the original file you could perfom the following command:
+```bash
+curl https://raw.githubusercontent.com/eclipse/paho.mqtt.python/master/setup.py -o setup.py
+```
+
+#### Testing with no-ssl
+To test the library without ssl, there is an example under `/generic/no-ssl`
+which uses a local deployment or a public broker at eclipse.
 
 --------
 ### Paho
