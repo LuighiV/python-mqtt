@@ -25,7 +25,7 @@ RESERVOIR_2_INFO = { 'username' : "MY_TEST_DEVICE_2", 'password' : None }
 VALVE_INFO = { 'username' : "MY_TEST_VALVE", 'password' : None }
 
 # Replace by your local server (or cloud server)
-CONNECT_URL = "34.235.37.198"
+CONNECT_URL = "localhost"
 PORT = 1883
 TIMEOUT = 600
 
