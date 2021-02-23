@@ -37,6 +37,11 @@ To get the original file you could perfom the following command:
 curl https://raw.githubusercontent.com/eclipse/paho.mqtt.python/master/setup.py -o setup.py
 ```
 
+Don't forget that, to install the library you should use:
+```
+python setup.py install
+```
+
 #### Testing with no-ssl
 To test the library without ssl, there is an example under `/generic/no-ssl`
 which uses a local deployment or a public broker at eclipse.
